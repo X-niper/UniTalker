@@ -1,0 +1,46 @@
+DATA:
+  dataset: "D5,D6,D7"
+  data_root: "./unitalker_data_release/"
+  duplicate_list: "1,1,1"
+  train_json_key: train.json
+
+LOSS:
+  rec_weight: 1.0
+  pca_weight: 0.01
+  blendshape_weight: 0.0001
+
+
+NETWORK:
+  use_pca: True
+  pca_dim: 512
+
+MODEL:
+  audio_encoder_repo: 'microsoft/wavlm-base-plus' # choose from 'microsoft/wavlm-base-plus' and facebook/wav2vec2-large-xlsr-53'
+  freeze_wav2vec: False
+  interpolate_pos: 1
+  decoder_dimension: 256
+  decoder_type: conv  # choose from conv and transformer
+  period: 30
+  headlayer: 1
+
+TRAIN:
+  fix_encoder_first: True
+  random_id_prob: 0.1
+  re_init_decoder_and_head: False
+  only_head: False
+  workers: 4  # data loader workers
+  batch_size: 1  # batch size for training
+  batch_size_val: 1  # batch size for validation during training, memory and speed tradeoff
+  lr: 0.0001
+  epochs: 100
+  save_every: 1
+  save_path: "./results"
+  weight_path:
+  eval_every: 1
+  test_every: 1
+  log_every: 1
+  do_test: True
+
+TEST:
+  test_wav_dir:
+  test_out_path:
