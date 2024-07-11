@@ -1,0 +1,37 @@
+# Byte-compiled / optimized files
+*__pycache__/
+*.py[cod]
+
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+.pip/
+pipenv/
+
+# IDE specific files
+.idea/
+.vscode/
+
+# Logs and temporary files
+*.log
+*.swp
+*.swo
+*.tmp
+
+# Miscellaneous
+.DS_Store
+records.txt
+binary_resources
+do_experiment.py
+small_tools
+scancel_job.py
+results
+template_resources
