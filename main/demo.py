@@ -136,6 +136,8 @@ def main():
 
     wav_f_names = get_all_audios(args.test_wav_dir)
     out_npz_path = args.test_out_path
+    dirname = os.path.dirname(out_npz_path)
+    os.makedirs(dirname, exist_ok=True)
 
 
     out_dict = {}

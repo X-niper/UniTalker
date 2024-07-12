@@ -28,7 +28,7 @@
 
 [PCA models](https://drive.google.com/file/d/1e0sG2vvdrtAMgwD5njctifhX0ai4eu3g/view?usp=sharing): download the pca models and unzip it in "./unitalker_data_release"
 
-use "git lfs pull" to get "./resources.zip" and unzip it in this repo
+use "git lfs pull" to get "./resources.zip" and "./test_audios.zip" and unzip it in this repo
 
 Finally, these files should be organized as follows:
 
@@ -42,19 +42,23 @@ Finally, these files should be organized as follows:
 |-- obj_template
 |   |-- 3DETF_blendshape_weight.obj
 |   `-- meshtalk_6172_vertices.obj
-`-- unitalker_data_release
+|-- unitalker_data_release
 |   |-- BIWI
-    |   `-- pca.npz
+|   |   `-- pca.npz
 |   |-- vocaset
-    |   `-- pca.npz
+|   |   `-- pca.npz
 |   `-- meshtalk
-        `-- pca.npz
+|       `-- pca.npz
+`-- test_audios
+    |-- angry1.wav
+    `-- ted2.wav
+
 ```
 ## Demo
 
 ```bash
-  python -m main.demo --config config/unitalker.yaml test_wav_dir ${test_wav_dir}
-  python -m main.render ./test_results/demo.npz ${test_wav_dir} ./test_results/
+  python -m main.demo --config config/unitalker.yaml test_out_path ./test_results/demo.npz
+  python -m main.render ./test_results/demo.npz ./test_audios ./test_results/
 ```
 
 # Train
@@ -69,4 +73,7 @@ If you want to train the model on the D0-D7, you need to download the datasets f
 [D4,D5: 3DETF](https://github.com/psyai-net/EmoTalk_release).
 
 ## Train
+
+```bash
 python -m main.train --config config/unitalker.yaml 
+```

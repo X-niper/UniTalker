@@ -43,5 +43,5 @@ TRAIN:
   do_test: True
 
 TEST:
-  test_wav_dir:
+  test_wav_dir: "./test_audios"
   test_out_path: "./test_results/demo.npz"
