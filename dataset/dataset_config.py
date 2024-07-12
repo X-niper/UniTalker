@@ -1,5 +1,5 @@
 dataset_config = {
-    'D1': {
+    'D0': {
         'dirname': 'BIWI',
         'annot_type': 'BIWI_23370_vertices',
         'scale': 0.2,
@@ -7,7 +7,7 @@ dataset_config = {
         'subjects': 6,
         'pca': True,
     },
-    'D2': {
+    'D1': {
         'dirname': 'vocaset',
         'annot_type': 'FLAME_5023_vertices',
         'scale': 1.0,
@@ -15,7 +15,7 @@ dataset_config = {
         'subjects': 12,
         'pca': True,
     },
-    'meshtalk': {
+    'D2': {
         'dirname': 'meshtalk',
         'annot_type': 'meshtalk_6172_vertices',
         'scale': 0.001,

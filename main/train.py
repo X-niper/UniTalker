@@ -11,7 +11,7 @@ from loss.loss import UniTalkerLoss
 from models.unitalker import UniTalker
 from utils.utils import (
     get_average_meter_dict, get_logger, get_parser, get_audio_encoder_dim,
-    load_ckpt, seed_everything,
+    load_ckpt, seed_everything, filter_unitalker_state_dict
 )
 from .train_eval_loop import train_epoch, validate_epoch
 
@@ -81,7 +81,7 @@ def main():
 
         if epoch_plus % args.save_every == 0:
             model_path = os.path.join(args.save_path, f'{epoch_plus:03d}.pt')
-            torch.save(model.state_dict(), model_path)
+            torch.save(filter_unitalker_state_dict(model.state_dict()), model_path)
 
 
 if __name__ == '__main__':

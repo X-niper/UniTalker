@@ -69,6 +69,7 @@ def merge_out_list(out_list: list, fps:int):
 def main():
     args = get_parser()
     training_dataset_name_list = args.dataset
+    demo_dataset_name_list = args.demo_dataset
     
     condition_id_config = {
         'D0': 3,
@@ -151,7 +152,7 @@ def main():
                 processor(audio_data, sampling_rate=sr).input_values)
 
             audio_data_splits = split_long_audio(audio_data, processor)
-            for dataset_name in training_dataset_name_list:
+            for dataset_name in demo_dataset_name_list:
                 template = template_id_config[dataset_name].cuda()
                 scale = dataset_config[dataset_name]['scale']
                 template = scale * template

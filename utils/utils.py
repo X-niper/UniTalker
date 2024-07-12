@@ -94,17 +94,12 @@ def get_template_dict(data_root, annot_type: str):
     return template_dict
 
 
-# def get_template_verts(data_root, annot_type: str, subject: str):
-#     if isinstance(subject, str):
-#         if subject.endswith('.obj'):
-#             verts = read_obj(subject)[0]
-#             return verts
-#         if subject.endswith('.npy'):
-#             return np.load(subject)[0]
-#         template_dict = get_template_dict(data_root, annot_type)
-#         return template_dict[subject]
-#     else:
-#         return subject
+def filter_unitalker_state_dict(in_dict):
+    out_dict = {}
+    for k, v in in_dict.items():
+        if not 'pca_layer_dict' in k:
+            out_dict[k] = v
+    return out_dict 
 
 def get_template_verts(data_root, dataset_name: str, subject: int):
     from dataset.dataset_config import dataset_config
@@ -221,6 +216,7 @@ def get_parser():
         cfg = config.merge_cfg_from_list(cfg, args.opts)
     cfg.condition_id = args.condition_id
     cfg.dataset = cfg.dataset.split(',')
+    cfg.demo_dataset = cfg.demo_dataset.split(',')
     if isinstance(cfg.duplicate_list, str):
         cfg.duplicate_list = cfg.duplicate_list.split(',')
         cfg.duplicate_list = [int(i) for i in cfg.duplicate_list]

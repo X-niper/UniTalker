@@ -1,7 +1,8 @@
 DATA:
-  dataset: "D5,D6,D7"
+  dataset: "D0,D1,D2,D3,D4,D5,D6,D7"
+  demo_dataset: "D0,D1,D2,D3,D4,D6,D7" # To visualize D5,  please download FLAME2020 model first and place it in "resources/binary_resources/flame.pkl"
   data_root: "./unitalker_data_release/"
-  duplicate_list: "1,1,1"
+  duplicate_list: "10,5,4,1,1,1,1,1"
   train_json_key: train.json
 
 LOSS:
@@ -35,7 +36,7 @@ TRAIN:
   epochs: 100
   save_every: 1
   save_path: "./results"
-  weight_path:
+  weight_path: "./pretrained_models/UniTalker-B-D0-D7.pt"
   eval_every: 1
   test_every: 1
   log_every: 1
@@ -43,4 +44,4 @@ TRAIN:
 
 TEST:
   test_wav_dir:
-  test_out_path:
+  test_out_path: "./test_results/demo.npz"
