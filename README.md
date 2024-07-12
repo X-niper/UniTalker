@@ -11,6 +11,13 @@
 - transformers 4.39.3
 - Pytorch3d 0.7.7 (Optional: just for rendering the results)
 
+```bash
+  conda create -n unitalker python==3.10
+  conda activate unitalker
+  conda install pytorch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 pytorch-cuda=12.1 -c pytorch -c nvidia
+  pip install transformers librosa tensorboardX
+```
+
 # Inference
 
 ## Download checkpoints, PCA models and template resources
