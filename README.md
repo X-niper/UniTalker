@@ -42,16 +42,16 @@ Finally, these files should be organized as follows:
 |-- obj_template
 |   |-- 3DETF_blendshape_weight.obj
 |   `-- meshtalk_6172_vertices.obj
-|-- unitalker_data_release
-|   |-- BIWI
-|   |   `-- pca.npz
-|   |-- vocaset
-|   |   `-- pca.npz
-|   `-- meshtalk
-|       `-- pca.npz
-`-- test_audios
-    |-- angry1.wav
-    `-- ted2.wav
+./unitalker_data_release
+|-- BIWI
+|   `-- pca.npz
+|-- vocaset
+|   `-- pca.npz
+`-- meshtalk
+|   `-- pca.npz
+./test_audios
+|-- angry1.wav
+`-- ted2.wav
 
 ```
 ## Demo
