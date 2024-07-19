@@ -33,27 +33,35 @@ use "git lfs pull" to get "./resources.zip" and "./test_audios.zip" and unzip it
 Finally, these files should be organized as follows:
 
 ```text
-./pretrained_models/
-|-- UniTalker-B-D0-D7.pt
-./resources/
-|-- binary_resources
-|   |-- 02_flame_mouth_idx.npy
-|   `-- vocaset_FDD_wo_eyes.npy
-|-- obj_template
-|   |-- 3DETF_blendshape_weight.obj
-|   `-- meshtalk_6172_vertices.obj
-./unitalker_data_release
-|-- BIWI
-|   `-- pca.npz
-|-- vocaset
-|   `-- pca.npz
-`-- meshtalk
-|   `-- pca.npz
-./test_audios
-|-- angry1.wav
-`-- ted2.wav
-
+├── pretrained_models
+│   ├── UniTalker-B-D0-D7.pt
+│   ├── UniTalker-L-D0-D7.pt
+├── resources
+│   ├── binary_resources
+│   │   ├── 02_flame_mouth_idx.npy
+│   │   ├── ...
+│   │   └── vocaset_FDD_wo_eyes.npy
+│   └── obj_template
+│       ├── 3DETF_blendshape_weight.obj
+│       ├── ...
+│       └── meshtalk_6172_vertices.obj
+├── test_audios
+│   ├── angry1.wav
+│   ├── ...
+│   └── ted2.wav
+├── unitalker_data_release 
+│   ├── BIWI
+│   │   ├── pca.npz
+│   ├── vocaset
+│   │   ├── pca.npz
+│   ├── meshtalk
+│   │   ├── pca.npz
+│   ├── ...
+│   ├── D5_unitalker_faceforensics++
+│   ├── D6_unitalker_Chinese_speech
+│   ├── D7_unitalker_song
 ```
+
 ## Demo
 
 ```bash
