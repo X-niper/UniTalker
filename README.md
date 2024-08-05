@@ -1,9 +1,17 @@
 
 # UniTalker: Scaling up Audio-Driven 3D Facial Animation through A Unified Model [ECCV2024]
 
+## Useful Links
 
-# Installation
-## Environment
+<div align="center">
+    <a href="https://x-niper.github.io/projects/UniTalker/" class="button"><b>[Homepage]</b></a> &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://arxiv.org/abs/2408.00762" class="button"><b>[arXiv]</b></a> &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="https://www.youtube.com/watch?v=oUUh67ECzig" class="button"><b>[Video]</b></a> &nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+
+
+## Installation
+### Environment
 - Linux
 - Python 3.10
 - Pytorch 2.2.0
@@ -18,9 +26,9 @@
   pip install transformers librosa tensorboardX
 ```
 
-# Inference
+## Inference
 
-## Download checkpoints, PCA models and template resources
+### Download checkpoints, PCA models and template resources
 
 [UniTalker-B-[D0-D7]](https://drive.google.com/file/d/1PmF8I6lyo0_64-NgeN5qIQAX6Bg0yw44/view?usp=sharing): The base model in paper. Download it and place it in "./pretrained_models"
 
@@ -86,16 +94,16 @@ Finally, these files should be organized as follows:
 │       └── val.json
 ```
 
-## Demo
+### Demo
 
 ```bash
   python -m main.demo --config config/unitalker.yaml test_out_path ./test_results/demo.npz
   python -m main.render ./test_results/demo.npz ./test_audios ./test_results/
 ```
 
-# Train
+## Train
 
-## Download Data
+### Download Data
 [unitalker_data_release_V1](https://drive.google.com/file/d/1qRBPsTdOWp72ty04oD1Q_ivtwMjrACLH/view?usp=sharing) contains D5, D6 and D7. The datasets have been processed and grouped into train, validation and test. Please use these three datasets to try the training step.
 If you want to train the model on the D0-D7, you need to download the datasets follow these links: 
 [D0: BIWI](https://github.com/Doubiiu/CodeTalker/blob/main/BIWI/README.md).
@@ -103,7 +111,7 @@ If you want to train the model on the D0-D7, you need to download the datasets f
 [D2: meshtalk](https://github.com/facebookresearch/meshtalk?tab=readme-ov-file).
 [D4,D5: 3DETF](https://github.com/psyai-net/EmoTalk_release).
 
-## Train
+### Modify Config and Train
 Please modify "dataset" in "config/unitalker.yaml" according to the datasets you have prepared. 
 
 ```bash
