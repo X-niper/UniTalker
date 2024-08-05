@@ -1,6 +1,6 @@
 dataset_config = {
     'D0': {
-        'dirname': 'BIWI',
+        'dirname': 'D0_BIWI',
         'annot_type': 'BIWI_23370_vertices',
         'scale': 0.2,
         'annot_dim': 23370 * 3,
@@ -8,7 +8,7 @@ dataset_config = {
         'pca': True,
     },
     'D1': {
-        'dirname': 'vocaset',
+        'dirname': 'D1_vocaset',
         'annot_type': 'FLAME_5023_vertices',
         'scale': 1.0,
         'annot_dim': 5023 * 3,
@@ -16,7 +16,7 @@ dataset_config = {
         'pca': True,
     },
     'D2': {
-        'dirname': 'meshtalk',
+        'dirname': 'D2_meshtalk',
         'annot_type': 'meshtalk_6172_vertices',
         'scale': 0.001,
         'annot_dim': 6172 * 3,
@@ -24,7 +24,7 @@ dataset_config = {
         'pca': True,
     },
     'D3': {
-        'dirname': '3DETF/HDTF',
+        'dirname': 'D3D4_3DETF/D3_HDTF',
         'annot_type': '3DETF_blendshape_weight',
         'scale': 1.0,
         'annot_dim': 52,
@@ -32,7 +32,7 @@ dataset_config = {
         'pca': False,
     },
     'D4': {
-        'dirname': '3DETF/RAVDESS',
+        'dirname': 'D3D4_3DETF/D4_RAVDESS',
         'annot_type': '3DETF_blendshape_weight',
         'scale': 1.0,
         'annot_dim': 52,
