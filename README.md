@@ -115,7 +115,7 @@ Finally, these files should be organized as follows:
 
 ### Download Data
 [unitalker_data_release_V1](https://drive.google.com/file/d/1qRBPsTdOWp72ty04oD1Q_ivtwMjrACLH/view?usp=sharing) contains D5, D6 and D7. The datasets have been processed and grouped into train, validation and test. Please use these three datasets to try the training step.
-If you want to train the model on the D0-D7, you need to download the datasets follow these links: 
+If you want to train the model on the D0-D7, you need to download the datasets following these links: 
 [D0: BIWI](https://github.com/Doubiiu/CodeTalker/blob/main/BIWI/README.md).
 [D1: VOCASET](https://voca.is.tue.mpg.de/).
 [D2: meshtalk](https://github.com/facebookresearch/meshtalk?tab=readme-ov-file).
