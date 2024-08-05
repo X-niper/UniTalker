@@ -14,8 +14,10 @@
 </div>
 
 
-> UniTalker generates realistic facial motion with different audio inputs, including clean and noisy voices in various languages, text-to-speech-generated audios, and even noisy songs accompanied by back- ground music. 
-> UniTalker can output multiple annotations for both academic and industrial use.
+> UniTalker generates realistic facial motion from different audio domains, including clean and noisy voices in various languages, text-to-speech-generated audios, and even noisy songs accompanied by back-ground music.
+> 
+> UniTalker can output multiple annotations.
+> 
 > For datasets with new annotations, one can simply plug new heads into UniTalker and train it with existing datasets or solely with new ones, avoiding retopology.
 
 ## Installation
