@@ -9,7 +9,9 @@
     <a href="https://www.youtube.com/watch?v=oUUh67ECzig" class="button"><b>[Video]</b></a> &nbsp;&nbsp;&nbsp;&nbsp;
 </div>
 
-![Alt text](https://github.com/X-niper/X-niper.github.io/blob/master/projects/UniTalker/assets/unitalker_architecture.png "UniTalker Architecture")
+<!-- ![Alt text](https://github.com/X-niper/X-niper.github.io/blob/master/projects/UniTalker/assets/unitalker_architecture.png "UniTalker Architecture")
+ -->
+<center><img src="https://github.com/X-niper/X-niper.github.io/blob/master/projects/UniTalker/assets/unitalker_architecture.png" alt="UniTalker Architecture" width="60%"/></center>
 
 > UniTalker generates realistic facial motion with different audio inputs, including clean and noisy voices in various languages, text-to-speech-generated audios, and even noisy songs accompanied by back- ground music. 
 > UniTalker can output multiple annotations for both academic and industrial use.
