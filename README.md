@@ -33,22 +33,22 @@
   conda create -n unitalker python==3.10
   conda activate unitalker
   conda install pytorch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 pytorch-cuda=12.1 -c pytorch -c nvidia
-  pip install transformers librosa tensorboardX
+  pip install transformers librosa tensorboardX smplx chumpy numpy==1.23.5 opencv-python
 ```
 
 ## Inference
 
 ### Download checkpoints, PCA models and template resources
 
-[UniTalker-B-[D0-D7]](https://drive.google.com/file/d/1PmF8I6lyo0_64-NgeN5qIQAX6Bg0yw44/view?usp=sharing): The base model in paper. Download it and place it in "./pretrained_models"
+[UniTalker-B-[D0-D7]](https://drive.google.com/file/d/1PmF8I6lyo0_64-NgeN5qIQAX6Bg0yw44/view?usp=sharing): The base model in paper. Download it and place it in `./pretrained_models` .
 
 [UniTalker-L-[D0-D7]](https://drive.google.com/file/d/1sH2T7KLFNjUnTM-V1eRMM1Tytxd2sYAp/view?usp=sharing): The default model in paper. Please first try the base model  to run the pipeline through.
 
-[unitalker_data_release_V1](https://drive.google.com/file/d/1Un7TB0Z5A1CG6bgeqKlhnSOECFN-C6KK/view?usp=sharing): The released datasets, PCA models, data-split json files and id-template numpy array. Download and unzip it in this repo.
+[Unitalker-data-release-V1](https://drive.google.com/file/d/1Un7TB0Z5A1CG6bgeqKlhnSOECFN-C6KK/view?usp=sharing): The released datasets, PCA models, data-split json files and id-template numpy array. Download and unzip it in this repo.
 
 <!-- [PCA models](https://drive.google.com/file/d/1e0sG2vvdrtAMgwD5njctifhX0ai4eu3g/view?usp=sharing): download the pca models and unzip it in "./unitalker_data_release" -->
 
-use "git lfs pull" to get "./resources.zip" and "./test_audios.zip" and unzip it in this repo
+Use `git lfs pull` to get `./resources.zip` and `./test_audios.zip` and unzip it in this repo.
 
 Finally, these files should be organized as follows:
 
@@ -65,7 +65,7 @@ Finally, these files should be organized as follows:
 │       ├── 3DETF_blendshape_weight.obj
 │       ├── ...
 │       └── meshtalk_6172_vertices.obj
-├── unitalker_data_release_V1
+└── unitalker_data_release_V1
 │   ├── D0_BIWI
 │   │   ├── id_template.npy
 │   │   └── pca.npz
@@ -114,7 +114,7 @@ Finally, these files should be organized as follows:
 ## Train
 
 ### Download Data
-[unitalker_data_release_V1](https://drive.google.com/file/d/1qRBPsTdOWp72ty04oD1Q_ivtwMjrACLH/view?usp=sharing) contains D5, D6 and D7. The datasets have been processed and grouped into train, validation and test. Please use these three datasets to try the training step.
+[Unitalker-data-release-V1](https://drive.google.com/file/d/1qRBPsTdOWp72ty04oD1Q_ivtwMjrACLH/view?usp=sharing) contains D5, D6 and D7. The datasets have been processed and grouped into train, validation and test. Please use these three datasets to try the training step.
 If you want to train the model on the D0-D7, you need to download the datasets following these links: 
 [D0: BIWI](https://github.com/Doubiiu/CodeTalker/blob/main/BIWI/README.md).
 [D1: VOCASET](https://voca.is.tue.mpg.de/).
@@ -122,7 +122,8 @@ If you want to train the model on the D0-D7, you need to download the datasets f
 [D4,D5: 3DETF](https://github.com/psyai-net/EmoTalk_release).
 
 ### Modify Config and Train
-Please modify "dataset" in "config/unitalker.yaml" according to the datasets you have prepared. 
+Please modify `dataset` and `duplicate_list` in `config/unitalker.yaml` according to the datasets you have prepared, ensuring that both lists maintain the same length.
+
 
 ```bash
 python -m main.train --config config/unitalker.yaml 
