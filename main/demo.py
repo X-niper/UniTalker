@@ -179,7 +179,7 @@ def main():
                     out_list.append(out.cpu().numpy().squeeze(0))
                 out = merge_out_list(out_list, fps)
                 out = loss_module.get_vertices(torch.from_numpy(out).cuda(), annot_type)
-                out_dict[wav_f][dataset_name] = out 
+                out_dict[wav_f][dataset_name] = out.cpu() 
         print(f"save results to {out_npz_path}")
         np.savez(out_npz_path, **out_dict)
 
